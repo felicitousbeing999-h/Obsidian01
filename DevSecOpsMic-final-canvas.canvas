@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"f62264d5ac669913","x":-540,"y":-135,"width":185,"height":100,"color":"2","type":"text","text":"Github Secret Scanning with push protecttion"},
+		{"id":"7b75f9e1da502b86","x":200,"y":-135,"width":250,"height":110,"color":"2","type":"text","text":"**DependaBot**: Check project dependency manifests for know vulns and reviews )"},
+		{"id":"809bc613428e51e4","x":600,"y":-145,"width":250,"height":130,"color":"2","type":"text","text":"**Defender for Containers** : evaluates container images in CI/CD and monitors workloads to catch runtime vulnerabilities"},
+		{"id":"b9912a962c39038b","x":-140,"y":-115,"width":250,"height":60,"color":"2","type":"text","text":"CodeQL code scanning"},
+		{"id":"b76d6ce7cf883ddb","x":-300,"y":-440,"width":50,"height":510,"type":"text","text":""},
+		{"id":"80a5c236f663cd96","type":"text","text":"","x":110,"y":-440,"width":50,"height":510},
+		{"id":"78ca5a47df467155","type":"text","text":"","x":500,"y":-440,"width":50,"height":510},
+		{"id":"a352ba72caa6e63d","x":-540,"y":-440,"width":250,"height":60,"type":"text","text":"Developer IDE"},
+		{"id":"0741f102a5884982","x":-200,"y":-440,"width":250,"height":60,"type":"text","text":"**Commit and Pull Request (PR)** "},
+		{"id":"bf61183c02f07df4","type":"text","text":"**Build** ","x":200,"y":-440,"width":250,"height":60},
+		{"id":"8747479136c763e6","type":"text","text":"Deploy and Artifact Storage","x":640,"y":-440,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"5b67031ae4f34084","fromNode":"f62264d5ac669913","fromSide":"right","toNode":"b9912a962c39038b","toSide":"left"},
+		{"id":"34abbef5920b4f4d","fromNode":"b9912a962c39038b","fromSide":"right","toNode":"7b75f9e1da502b86","toSide":"left"},
+		{"id":"ad89f7f0868c9aa9","fromNode":"7b75f9e1da502b86","fromSide":"right","toNode":"809bc613428e51e4","toSide":"left"}
+	]
+}

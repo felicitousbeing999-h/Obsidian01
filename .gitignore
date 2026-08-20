@@ -1,0 +1,25 @@
+# ================================
+# Obsidian
+# ================================
+
+# Temporary workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# ================================
+# OS-generated files
+# ================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+Untitled 5.md
+# ================================
+# Temporary / editor files
+# ================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
