@@ -1,5 +1,5 @@
 
-[Microsoft Certified: DevOps Engineer Expert - Certifications | Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/)![[microsoft-certified-expert-badge.svg]]
+[Microsoft Certified: DevOps Engineer Expert - Certifications | Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/)![microsoft-certified-expert-badge](microsoft-certified-expert-badge.svg)
 # AZ 400 Devops Engineering Expert
 
 

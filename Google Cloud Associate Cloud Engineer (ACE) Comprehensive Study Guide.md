@@ -10,7 +10,7 @@ tags: [GCP, ACE, Cloud-Engineering, Certification, Study-Guide, Exam-Prep]
 
 ---
 
-![[Pasted image 20260729003138.png]]
+![Pasted image 20260729003138](Pasted%20image%2020260729003138.png)
 
 This note consolidates the blueprint of the ACE exam, emphasizing service selection, cost optimization, and the "least privilege" mindset required in production environments.
 
@@ -183,4 +183,4 @@ The ACE exam frequently tests your ability to recognize valid command-line synta
     - Copy object: `gsutil cp [FILE] gs://[BUCKET_NAME]`.
 - **BigQuery (bq):**
     - Load data: `bq load --autodetect --source_format=CSV [DATASET].[TABLE] [PATH_TO_SOURCE]`.
-![[Pasted image 20260729002747.png]]
+![Pasted image 20260729002747](Pasted%20image%2020260729002747.png)

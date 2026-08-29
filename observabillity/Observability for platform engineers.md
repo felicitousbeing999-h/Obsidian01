@@ -1,5 +1,5 @@
 
-![[Pasted image 20260810021200.png]]
+![Pasted image 20260810021200](../Pasted%20image%2020260810021200.png)
 
 ## Observability or monitoring?
 
@@ -46,7 +46,7 @@ By viewing observability as a core product feature of the platform, they can abs
 
 Ultimately, this reduces friction for developers, allowing them to focus on business logic while ensuring reliable and consistent insights.
 
-![[Pasted image 20260811042319.png]]
+![Pasted image 20260811042319](../Pasted%20image%2020260811042319.png)
 
 - **Prometheus** for storing **metrics**.
 - **OpenSearch** for storing **logs**.
@@ -86,7 +86,7 @@ It is crucial to evaluate governance, community activity, and licensing terms, n
 
 
 
-![[Pasted image 20260811043135.png]]
+![Pasted image 20260811043135](../Pasted%20image%2020260811043135.png)
 
 
 
@@ -108,7 +108,7 @@ OTel metrics are structured, correlated, and flexible, similar to Prometheus. Th
 - Histogram: aggregates value distributions, e.g., request latency
 - Asynchronous instruments: for when you don’t control the increment, e.g., reading memory usage directly
 
-![[Pasted image 20260811043342.png]]
+![Pasted image 20260811043342](../Pasted%20image%2020260811043342.png)
 
 ## Resources
 
