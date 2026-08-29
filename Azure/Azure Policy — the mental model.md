@@ -274,7 +274,7 @@ Think:
 Policy detects:
 
 ```text
-❌ Resource is non-compliant
+ Resource is non-compliant
 ```
 
 A remediation task can bring it into compliance for policies using effects such as:

@@ -1,4 +1,4 @@
-
+#kubernetes
 
 > [!abstract] Problem  
 > Nginx returned **404 Not Found** even though the Nginx ConfigMap looked correct.
