@@ -38,7 +38,7 @@ flowchart LR
     ROOT --> PHP["PHP-FPM"]
 ```
 
-> [!important] Configuration vs Runtime  
+> [!IMPORTANT] Configuration vs Runtime  
 > The ConfigMap said Nginx should serve files from `/var/www/html`.  
 > Next step: verify that the **container filesystem actually provides that path**.
 
@@ -170,7 +170,7 @@ flowchart LR
     style F stroke-width:2px
 ```
 
-> [!success] Correct State  
+> [!TIP] Correct State  
 > **Nginx and PHP-FPM must mount the shared volume at the same logical application path** when both processes need to access the same files.
 
 ---
@@ -210,7 +210,7 @@ kubectl cp index.php nginx-php-fpm:/var/www/html/index.php -c nginx
 |`/var/www/html/index.php`|Destination inside container|
 |`-c nginx`|Select the Nginx container|
 
-> [!important] Why `-c nginx`?  
+> [!IMPORTANT] Why `-c nginx`?  
 > The Pod has **two containers**. Explicitly specifying `-c nginx` prevents `kubectl` from selecting the wrong container.
 
 ---
@@ -252,7 +252,7 @@ flowchart TD
     style K stroke-width:2px
 ```
 
-> [!tip] Architectural Takeaway  
+> [!TIP] Architectural Takeaway  
 > **Kubernetes volume sharing does not imply path sharing.**
 > 
 > When sidecar/container processes collaborate on the same application files, verify all three layers:
