@@ -1,6 +1,6 @@
 #linux 
 
-> [!summary] Goal  
+> [!NOTE] Goal  
 > Nginx `:8097` → PHP-FPM Unix socket → PHP app
 
 ```mermaid
@@ -82,5 +82,5 @@ sudo ss -lntp | grep 8097
 curl http://stapp01:8097/index.php
 ```
 
-> [!success] Final result  
+> [!TIP] Final result  
 > `Welcome to xFusionCorp Industries!` → **Nginx + PHP-FPM integration working.**
