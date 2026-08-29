@@ -1,6 +1,6 @@
 https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/
 
-![[az-104-administrator-prerequisites.svg]]
+![az-104-administrator-prerequisites](../az-104-administrator-prerequisites.svg)
 
 
 [  

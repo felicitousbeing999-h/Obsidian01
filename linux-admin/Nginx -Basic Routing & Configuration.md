@@ -103,7 +103,7 @@ server {
 Nginx can route requests based on the **Host header**.
 
 ---
-![[Pasted image 20260826151257.png]]
+![Pasted image 20260826151257](../Pasted%20image%2020260826151257.png)
 ## 4. `location` = URL Routing
 
 ```nginx
