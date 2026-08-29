@@ -1,6 +1,6 @@
  Microsoft Entra ID — Complete Beginner Mental Model
 
-> [!abstract] Core idea  
+> [!NOTE] Core idea  
 > **Microsoft Entra ID is Microsoft's cloud identity platform.**
 > 
 > It answers:

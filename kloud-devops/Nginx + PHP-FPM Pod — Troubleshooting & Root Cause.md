@@ -1,16 +1,16 @@
 #kubernetes
 
-> [!abstract] Problem  
+> [!NOTE] Problem  
 > Nginx returned **404 Not Found** even though the Nginx ConfigMap looked correct.
 > 
 > **Root cause:** Nginx and PHP-FPM mounted the same shared volume at **different filesystem paths**.
 
-![[Pasted image 20260829131306.png]]
+![Pasted image 20260829131306](../Pasted%20image%2020260829131306.png)
 
 
 ---
 
-![[Pasted image 20260829131549.png]]
+![Pasted image 20260829131549](../Pasted%20image%2020260829131549.png)
 
 
 ## 1. Inspect the Nginx Configuration
@@ -18,7 +18,7 @@
 ```bash
 kubectl get configmap nginx-config -o yaml
 ```
-![[Pasted image 20260829131644.png]]
+![Pasted image 20260829131644](../Pasted%20image%2020260829131644.png)
 **Why:** Validate the configuration actually consumed by Nginx.
 
 Key values:
@@ -51,14 +51,14 @@ kubectl get pods
 ```
 
 **Why:** Identify the Pod and confirm its runtime state.
-![[Pasted image 20260829131846.png]]
+![Pasted image 20260829131846](../Pasted%20image%2020260829131846.png)
 
 
 ```bash
 kubectl get pod nginx-php-fpm -o yaml
 ```
 
-![[Pasted image 20260829131816.png]]
+![Pasted image 20260829131816](../Pasted%20image%2020260829131816.png)
 **Why:** Inspect the actual Pod specification, especially:
 
 - `containers`
@@ -152,10 +152,10 @@ volumeMounts:
   mountPath: /var/www/html
 ```
 
-![[Pasted image 20260829132143.png]]
+![Pasted image 20260829132143](../Pasted%20image%2020260829132143.png)
 Now both containers agree:
 
-![[Pasted image 20260829132345.png]]
+![Pasted image 20260829132345](../Pasted%20image%2020260829132345.png)
 
 ```mermaid
 flowchart LR
@@ -179,7 +179,7 @@ flowchart LR
 
 Delete the old Pod and Apply the corrected manifest:
 
-![[Pasted image 20260829132435.png]]
+![Pasted image 20260829132435](../Pasted%20image%2020260829132435.png)
 
 > **Why:** The Pod needs to be recreated with the corrected `volumeMount`and Creates the Pod using the modified specification.
 

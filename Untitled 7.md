@@ -1,5 +1,5 @@
 ## Communication workflow
-![[Pasted image 20260816203431.png]]
+![Pasted image 20260816203431](Pasted%20image%2020260816203431.png)
 Here's the standard communication pattern between agents and Azure Pipelines:
 
 ### 1. Agent registration
@@ -65,7 +65,7 @@ Here's the standard communication pattern between agents and Azure Pipelines:
 - **Key exchange:** Each agent has a public-private key pair, with the public key shared during registration.
 - **Payload protection:** The server encrypts job payloads using the agent's public key before transmission.
 - **Decryption:** The agent decrypts job content using its private key.
-- **Secrets protection:** Secrets stored in build pipelines, release pipelines, or variable groups remain secure during agent communication.![[Pasted image 20260816203446.png]]
+- **Secrets protection:** Secrets stored in build pipelines, release pipelines, or variable groups remain secure during agent communication.![Pasted image 20260816203446](Pasted%20image%2020260816203446.png)
 
 ## Network considerations
 

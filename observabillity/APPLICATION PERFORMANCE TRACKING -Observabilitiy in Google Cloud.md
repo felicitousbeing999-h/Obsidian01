@@ -82,7 +82,7 @@ npm install --save @google-cloud/error-reporting_
 
 ## Step 2:
 
-![[Pasted image 20260807005119.png]]
+![Pasted image 20260807005119](../Pasted%20image%2020260807005119.png)
 
 
 The easiest way to manually log errors to Error Reporting in Node.js is to import the Error Reporting library.
@@ -154,7 +154,7 @@ To use Cloud Trace effectively, you must understand the relationship between tra
 - **Span**: Describes how long it takes to perform a complete suboperation. For example, a trace might describe how long it takes to process an incoming request from a user and return a response. A span might describe how long a particular RPC call requires.
     
 - **Tracing Client**: Collects spans and sends them to Cloud Trace.
-![[Pasted image 20260807011630.png]]- If an OpenCensus library is available for your programming language, you can simplify the process of creating and sending trace data by using OpenCensus. In addition to being simpler to use, OpenCensus implements batching that might improve performance.
+![Pasted image 20260807011630](../Pasted%20image%2020260807011630.png)- If an OpenCensus library is available for your programming language, you can simplify the process of creating and sending trace data by using OpenCensus. In addition to being simpler to use, OpenCensus implements batching that might improve performance.
     
 - •
     
@@ -191,12 +191,12 @@ Trace will need to offload tracing metrics to Google Cloud.  As far as the requ
 App Engine, Cloud Run, Cloud Run functions, Google Kubernetes Engine, and Compute Engine have default access. However, Compute Engine and GKE get that access through the default Compute Engine service account.
 
 
-![[Pasted image 20260807012024.png]]
+![Pasted image 20260807012024](../Pasted%20image%2020260807012024.png)
 
 
 # Cloud Profiler
 
-![[Pasted image 20260807023658.png]]
+![Pasted image 20260807023658](../Pasted%20image%2020260807023658.png)
 
 Cloud Profiler is a statistical, low-overhead profiler that continuously gathers CPU usage and memory-allocation information from your production applications. It attributes that information to the source code that generated it, which helps you identify the parts of your application that are consuming the most resources. The insights provided illuminate the performance of your application characteristics.
 
@@ -294,7 +294,7 @@ def main():
 ## Analyzing the Profiler interface
 
 The Profiler interface uses a Flame Graph to help you visualize resource consumption across your entire application.
-![[Pasted image 20260807024229.png]]
+![Pasted image 20260807024229](../Pasted%20image%2020260807024229.png)
 
 ### The Flame Graph
 
