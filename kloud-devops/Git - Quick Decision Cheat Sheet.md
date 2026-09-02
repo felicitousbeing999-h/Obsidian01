@@ -54,18 +54,18 @@ mindmap
 
 ## Scenario → Command
 
-|Scenario|Command / Action|Remember|
-|---|---|---|
-|Need latest remote changes|`git pull`|**Get**|
-|Send committed work|`git push`|**Send**|
-|Feature needs latest `master`|`git rebase master`|**Replay**|
-|Rebased branch → remote|`git push --force-with-lease`|**Rewrite safely**|
-|Need to switch with unfinished work|`git stash`|**Park**|
-|Delete uncommitted tracked changes|`git reset --hard HEAD`|**Destroy**|
-|Undo a shared/bad commit|`git revert <commit>`|**New undo commit**|
-|Combine multiple commits|`git rebase -i HEAD~N` → `squash`|**Combine**|
-|Merge/rebase conflict|Fix → `git add` → continue/commit|**Resolve**|
-|Automate action after Git event|Git hook|**Automate**|
+| Scenario                            | Command / Action                  | Remember            |
+| ----------------------------------- | --------------------------------- | ------------------- |
+| Need latest remote changes          | `git pull`                        | **Get**             |
+| Send committed work                 | `git push`                        | **Send**            |
+| Feature needs latest `master`       | `git rebase master`               | **Replay**          |
+| Rebased branch → remote             | `git push --force-with-lease`     | **Rewrite safely**  |
+| Need to switch with unfinished work | `git stash`                       | **Park**            |
+| Delete uncommitted tracked changes  | `git reset --hard HEAD`           | **Destroy**         |
+| Undo a shared/bad commit            | `git revert <commit>`             | **New undo commit** |
+| Combine multiple commits            | `git rebase -i HEAD~N` → `squash` | **Combine**         |
+| Merge/rebase conflict               | Fix → `git add` → continue/commit | **Resolve**         |
+| Automate action after Git event     | Git hook                          | **Automate**        |
 
 ## 7-Second Decision Tree
 
