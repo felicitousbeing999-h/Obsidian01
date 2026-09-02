@@ -1,16 +1,16 @@
 #kubernetes
 
-> [!abstract] Problem  
+> [!NOTE] Problem  
 > Nginx returned **404 Not Found** even though the Nginx ConfigMap looked correct.
 > 
 > **Root cause:** Nginx and PHP-FPM mounted the same shared volume at **different filesystem paths**.
 
-![[Pasted image 20260829131306.png]]
+![Pasted image 20260829131306](../Pasted%20image%2020260829131306.png)
 
 
 ---
 
-![[Pasted image 20260829131549.png]]
+![Pasted image 20260829131549](../Pasted%20image%2020260829131549.png)
 
 
 ## 1. Inspect the Nginx Configuration
@@ -18,7 +18,7 @@
 ```bash
 kubectl get configmap nginx-config -o yaml
 ```
-![[Pasted image 20260829131644.png]]
+![Pasted image 20260829131644](../Pasted%20image%2020260829131644.png)
 **Why:** Validate the configuration actually consumed by Nginx.
 
 Key values:
@@ -38,7 +38,7 @@ flowchart LR
     ROOT --> PHP["PHP-FPM"]
 ```
 
-> [!important] Configuration vs Runtime  
+> [!IMPORTANT] Configuration vs Runtime  
 > The ConfigMap said Nginx should serve files from `/var/www/html`.  
 > Next step: verify that the **container filesystem actually provides that path**.
 
@@ -51,14 +51,14 @@ kubectl get pods
 ```
 
 **Why:** Identify the Pod and confirm its runtime state.
-![[Pasted image 20260829131846.png]]
+![Pasted image 20260829131846](../Pasted%20image%2020260829131846.png)
 
 
 ```bash
 kubectl get pod nginx-php-fpm -o yaml
 ```
 
-![[Pasted image 20260829131816.png]]
+![Pasted image 20260829131816](../Pasted%20image%2020260829131816.png)
 **Why:** Inspect the actual Pod specification, especially:
 
 - `containers`
@@ -152,10 +152,10 @@ volumeMounts:
   mountPath: /var/www/html
 ```
 
-![[Pasted image 20260829132143.png]]
+![Pasted image 20260829132143](../Pasted%20image%2020260829132143.png)
 Now both containers agree:
 
-![[Pasted image 20260829132345.png]]
+![Pasted image 20260829132345](../Pasted%20image%2020260829132345.png)
 
 ```mermaid
 flowchart LR
@@ -170,7 +170,7 @@ flowchart LR
     style F stroke-width:2px
 ```
 
-> [!success] Correct State  
+> [!TIP] Correct State  
 > **Nginx and PHP-FPM must mount the shared volume at the same logical application path** when both processes need to access the same files.
 
 ---
@@ -179,7 +179,7 @@ flowchart LR
 
 Delete the old Pod and Apply the corrected manifest:
 
-![[Pasted image 20260829132435.png]]
+![Pasted image 20260829132435](../Pasted%20image%2020260829132435.png)
 
 > **Why:** The Pod needs to be recreated with the corrected `volumeMount`and Creates the Pod using the modified specification.
 
@@ -210,7 +210,7 @@ kubectl cp index.php nginx-php-fpm:/var/www/html/index.php -c nginx
 |`/var/www/html/index.php`|Destination inside container|
 |`-c nginx`|Select the Nginx container|
 
-> [!important] Why `-c nginx`?  
+> [!IMPORTANT] Why `-c nginx`?  
 > The Pod has **two containers**. Explicitly specifying `-c nginx` prevents `kubectl` from selecting the wrong container.
 
 ---
@@ -252,7 +252,7 @@ flowchart TD
     style K stroke-width:2px
 ```
 
-> [!tip] Architectural Takeaway  
+> [!TIP] Architectural Takeaway  
 > **Kubernetes volume sharing does not imply path sharing.**
 > 
 > When sidecar/container processes collaborate on the same application files, verify all three layers:

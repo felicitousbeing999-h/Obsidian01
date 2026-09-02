@@ -314,7 +314,7 @@ ls -la
 
 ---
 
-  ![[Pasted image 20260729223041.png]]
+  ![Pasted image 20260729223041](Pasted%20image%2020260729223041.png)
 
 ## Key Takeaways for DevOps & MLOps
 
