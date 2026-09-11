@@ -1,4 +1,4 @@
-![[Pasted image 20260910232717.png]]![[Pasted image 20260910232912.png]]![[Pasted image 20260910233027.png]] 
+![Pasted image 20260910232717.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260910232717.png)![Pasted image 20260910232912.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260910232912.png)![Pasted image 20260910233027.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260910233027.png) 
 
 ## Visual Execution Path
 

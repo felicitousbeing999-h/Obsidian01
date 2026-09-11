@@ -1,4 +1,4 @@
-![[Pasted image 20260902150005.png]]
+![Pasted image 20260902150005.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260902150005.png)
 
 cat db-deployment.yaml
 
@@ -123,4 +123,4 @@ spec:
 
 ```
 
-![[Pasted image 20260902150352.png]]
+![Pasted image 20260902150352.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260902150352.png)

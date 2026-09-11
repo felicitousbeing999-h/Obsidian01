@@ -1,5 +1,5 @@
 A DaemonSet is a Kubernetes resource that ensures that all nodes run a copy of a Pod. Whenever a new node is added to the cluster, Kubernetes will automatically attempt to schedule a DaemonSet Pod onto it.
-![[Pasted image 20260904165816.png]]
+![Pasted image 20260904165816.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904165816.png)
 Typical use cases for DaemonSets include:
 
 - Log collection: agents like Fluentd or Filebeat
@@ -17,12 +17,12 @@ DaemonSet:
 
 - You control node coverage
 - 1 pod on every node
-![[Pasted image 20260904171456.png]]
+![Pasted image 20260904171456.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904171456.png)
 ---
-![[Pasted image 20260904171602.png]]
+![Pasted image 20260904171602.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904171602.png)
 ###### Creating a DaemonSet from a Deployment
 
-The best way to understand DaemonSets is by getting hands on - we're going to create our own. The great news is, as you already know how to create a Deployment, you're 90% of the way towards creating DaemonSets.![[Pasted image 20260904171633.png]]
+The best way to understand DaemonSets is by getting hands on - we're going to create our own. The great news is, as you already know how to create a Deployment, you're 90% of the way towards creating DaemonSets.![Pasted image 20260904171633.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904171633.png)
 
 Unlike a Deployment, there isn't a convenient kubectl command for running or creating a DaemonSet, but we can fast track these by using the Deployment spec as our base.
 
@@ -113,7 +113,7 @@ That's looking good - we have the node from which it's running in the logs.
 ###### The Problem with Deployments for Node Coverage
 
 Now, we know we have 3 nodes. What happens if we scale to 3 replicas? We might get lucky, we might get one on each node, let's try it -
-![[Pasted image 20260904172651.png]]
+![Pasted image 20260904172651.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904172651.png)
 `kubectl scale --replicas=3 deployment/logger`
 
 Check the logs -

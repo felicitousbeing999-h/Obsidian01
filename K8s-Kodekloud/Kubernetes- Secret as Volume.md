@@ -1,4 +1,4 @@
-![[Pasted image 20260902135450.png]]![[Pasted image 20260902140322.png]]
+![Pasted image 20260902135450.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260902135450.png)![Pasted image 20260902140322.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260902140322.png)
 > [!abstract] Pattern  
 > **Kubernetes Secret → Pod Volume → Container Filesystem**
 

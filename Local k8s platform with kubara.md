@@ -1,1 +1,1 @@
-[Build a Local Kubernetes Platform with kubara, kind, and Argo CD | by Artem Lajko | Aug, 2026 | ITNEXT](https://itnext.io/build-a-local-kubernetes-platform-with-kubara-kind-and-argo-cd-b83aaa36b65b)![[1_aGoGCQUqo604svR1rsdLhA.webp]]
+[Build a Local Kubernetes Platform with kubara, kind, and Argo CD | by Artem Lajko | Aug, 2026 | ITNEXT](https://itnext.io/build-a-local-kubernetes-platform-with-kubara-kind-and-argo-cd-b83aaa36b65b)![1_aGoGCQUqo604svR1rsdLhA.webp](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/1_aGoGCQUqo604svR1rsdLhA.webp)

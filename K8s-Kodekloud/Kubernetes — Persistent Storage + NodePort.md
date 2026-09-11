@@ -1,4 +1,4 @@
-![[Pasted image 20260901221537.png]].
+![Pasted image 20260901221537.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260901221537.png).
 
 
 

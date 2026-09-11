@@ -53,9 +53,9 @@ spec:
 ```
 
 
-![[Pasted image 20260903184436.png]]
+![Pasted image 20260903184436.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260903184436.png)
 
-![[Pasted image 20260903184514.png]]Here are all the complete manifests for the task, ready to apply or keep for reference.
+![Pasted image 20260903184514.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260903184514.png)Here are all the complete manifests for the task, ready to apply or keep for reference.
 
   
 
