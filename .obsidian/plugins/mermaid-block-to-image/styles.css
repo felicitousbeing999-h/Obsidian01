@@ -1,0 +1,229 @@
+/* Styles for Mermaid Block to Image interactive buttons */
+
+/* Ensure the containers are relative so absolute buttons are positioned correctly */
+.workspace-leaf .cm-preview-code-block.cm-lang-mermaid,
+.workspace-leaf .block-language-mermaid,
+.workspace-leaf .mermaid,
+.workspace-leaf .internal-embed,
+.workspace-leaf .mermaid-image-container {
+  position: relative;
+}
+
+/* Base styles for all Mermaid action buttons (convert, download-active, restore, download) */
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-convert,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-convert,
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-download-active,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-download-active,
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-restore,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-restore,
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-download,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-download {
+  position: absolute;
+  background-color: color-mix(in srgb, var(--interactive-accent) 12%, var(--background-primary) 70%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid var(--interactive-accent);
+  border-radius: var(--radius-s);
+  color: var(--interactive-accent);
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, color 0.15s ease, opacity 0.2s ease-in-out, box-shadow 0.15s ease, border-color 0.15s ease;
+  z-index: 10;
+  opacity: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover styles for all Mermaid action buttons */
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-convert:hover,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-convert:hover,
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-download-active:hover,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-download-active:hover,
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-restore:hover,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-restore:hover,
+body .workspace-leaf .markdown-source-view .edit-block-button.mermaid-action-btn-download:hover,
+body .workspace-leaf .markdown-preview-view .edit-block-button.mermaid-action-btn-download:hover {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent, #ffffff);
+  border-color: var(--interactive-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Reveal active block buttons on hover of parent container */
+.workspace-leaf .cm-embed-block:hover .edit-block-button.mermaid-action-btn-convert,
+.workspace-leaf .cm-embed-block:hover .edit-block-button.mermaid-action-btn-download-active,
+.workspace-leaf .block-language-mermaid:hover .edit-block-button.mermaid-action-btn-convert,
+.workspace-leaf .block-language-mermaid:hover .edit-block-button.mermaid-action-btn-download-active,
+.workspace-leaf .mermaid:hover .edit-block-button.mermaid-action-btn-convert,
+.workspace-leaf .mermaid:hover .edit-block-button.mermaid-action-btn-download-active {
+  opacity: 1;
+}
+
+/* Shift the convert button to the left of Obsidian's native code block edit button */
+.workspace-leaf .cm-embed-block .edit-block-button.mermaid-action-btn-convert,
+.workspace-leaf .block-language-mermaid .edit-block-button.mermaid-action-btn-convert,
+.workspace-leaf .mermaid .edit-block-button.mermaid-action-btn-convert {
+  inset-inline-end: calc(var(--size-2-2) + 40px);
+  top: 8px;
+  left: auto;
+  bottom: auto;
+}
+
+/* Shift the download button on active block to the left of convert button */
+.workspace-leaf .cm-embed-block .edit-block-button.mermaid-action-btn-download-active,
+.workspace-leaf .block-language-mermaid .edit-block-button.mermaid-action-btn-download-active,
+.workspace-leaf .mermaid .edit-block-button.mermaid-action-btn-download-active {
+  inset-inline-end: calc(var(--size-2-2) + 80px);
+  top: 8px;
+  left: auto;
+  bottom: auto;
+}
+
+/* Position settings for our custom action buttons on image embeds */
+.workspace-leaf .edit-block-button.mermaid-action-btn-restore,
+.workspace-leaf .edit-block-button.mermaid-action-btn-download {
+  top: 8px;
+  left: auto;
+  bottom: auto;
+}
+
+/* Position restore button */
+.workspace-leaf .cm-embed-block .internal-embed .edit-block-button.mermaid-action-btn-restore,
+.workspace-leaf .cm-embed-block .image-embed .edit-block-button.mermaid-action-btn-restore {
+  right: calc(var(--size-2-2) + 40px);
+}
+.workspace-leaf .markdown-rendered .internal-embed .edit-block-button.mermaid-action-btn-restore,
+.workspace-leaf .markdown-rendered .image-embed .edit-block-button.mermaid-action-btn-restore,
+.workspace-leaf .mermaid-image-wrapper .edit-block-button.mermaid-action-btn-restore {
+  right: 8px;
+}
+
+/* Position download button (shifted further left to be side-by-side with restore) */
+.workspace-leaf .cm-embed-block .internal-embed .edit-block-button.mermaid-action-btn-download,
+.workspace-leaf .cm-embed-block .image-embed .edit-block-button.mermaid-action-btn-download {
+  right: calc(var(--size-2-2) + 80px);
+}
+.workspace-leaf .markdown-rendered .internal-embed .edit-block-button.mermaid-action-btn-download,
+.workspace-leaf .markdown-rendered .image-embed .edit-block-button.mermaid-action-btn-download,
+.workspace-leaf .mermaid-image-wrapper .edit-block-button.mermaid-action-btn-download {
+  right: 48px;
+}
+
+/* Custom inline-block image wrapper styles */
+.workspace-leaf .mermaid-image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.workspace-leaf .mermaid-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reveal buttons when hovering over the image embed or any processed container */
+.workspace-leaf [data-mermaid-image-processed="true"]:hover .edit-block-button.mermaid-action-btn-restore,
+.workspace-leaf [data-mermaid-image-processed="true"]:hover .edit-block-button.mermaid-action-btn-download,
+.workspace-leaf .internal-embed:hover .edit-block-button.mermaid-action-btn-restore,
+.workspace-leaf .internal-embed:hover .edit-block-button.mermaid-action-btn-download,
+.workspace-leaf .image-embed:hover .edit-block-button.mermaid-action-btn-restore,
+.workspace-leaf .image-embed:hover .edit-block-button.mermaid-action-btn-download {
+  opacity: 1;
+}
+
+/* Ensure consistent button icon sizes */
+.mermaid-action-btn-convert svg,
+.mermaid-action-btn-download-active svg,
+.mermaid-action-btn-restore svg,
+.mermaid-action-btn-download svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* Visual drag resize handle on the right edge of processed image wrappers/embeds */
+.workspace-leaf .mermaid-resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  cursor: ew-resize;
+  z-index: 9;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+/* Highlight the drag handle subtly on hover */
+.workspace-leaf [data-mermaid-image-processed="true"]:hover .mermaid-resize-handle,
+.workspace-leaf .internal-embed:hover .mermaid-resize-handle,
+.workspace-leaf .image-embed:hover .mermaid-resize-handle {
+  background-color: color-mix(in srgb, var(--interactive-accent) 15%, transparent);
+}
+
+/* Make it fully prominent when hovering the handle itself or dragging active */
+body .workspace-leaf [data-mermaid-image-processed="true"] .mermaid-resize-handle:hover,
+body .workspace-leaf .internal-embed .mermaid-resize-handle:hover,
+body .workspace-leaf .image-embed .mermaid-resize-handle:hover,
+body.mermaid-resizing-active .workspace-leaf .mermaid-resize-handle {
+  background-color: var(--interactive-accent);
+  box-shadow: 0 0 4px var(--interactive-accent);
+}
+
+/* Resize overlay to capture cursor and select events during dragging */
+.mermaid-resize-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  cursor: ew-resize;
+  z-index: 99999;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Visual drag resize tooltip overlay showing pixel width dynamically */
+.workspace-leaf .mermaid-resize-tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background-modifier-accent);
+  color: var(--text-on-accent, #ffffff);
+  padding: 2px 8px;
+  border-radius: var(--radius-s);
+  font-size: var(--font-xs);
+  font-weight: var(--font-semibold);
+  box-shadow: var(--shadow-s);
+  pointer-events: none;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+/* Settings tab formats guide */
+.mermaid-settings-guide {
+  white-space: pre-line;
+  margin-bottom: 1.5em;
+  padding: 10px;
+  background-color: var(--background-secondary);
+  border-radius: 4px;
+}
+
+/* Dark mode card styling for light-themed diagrams to ensure high contrast and readability */
+body.theme-dark .workspace-leaf .mermaid-image-wrapper[data-mermaid-theme="light"] img,
+body.theme-dark .workspace-leaf .mermaid-image-container[data-mermaid-theme="light"] img,
+body.theme-dark .workspace-leaf .image-embed[data-mermaid-theme="light"] img,
+body.theme-dark .workspace-leaf .internal-embed[data-mermaid-theme="light"] img {
+  background-color: #ffffff;
+  border-radius: var(--radius-m, 8px);
+  padding: 12px;
+  border: 1px solid var(--background-modifier-border, #e0e0e0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+  height: auto;
+}
