@@ -7,7 +7,6 @@ Here's the standard communication pattern between agents and Azure Pipelines:
 - You register an agent with Azure Pipelines by adding it to an agent pool.
 - You must be an agent pool administrator to register an agent.
 - The administrator identity is only needed during registration, not for ongoing communication.
-
 ### 2. Token exchange
 
 - After registration, the agent downloads a listener OAuth token.
