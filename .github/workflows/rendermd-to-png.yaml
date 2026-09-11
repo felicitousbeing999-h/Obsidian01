@@ -1,5 +1,3 @@
-# .github/workflows/render-md-mermaid.yml
-
 name: render-md-mermaid
 
 on:
@@ -7,19 +5,37 @@ on:
     paths:
       - '**.md'
 
+permissions:
+  contents: write
+
 jobs:
   render-md-mermaid:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Render images for every Mermaid diagram in all Markdown files (*.md) in the repo
-        uses: nielsvaneck/render-md-mermaid@v2
-
-      - name: Commit rendered png and svg files
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: actions/checkout@v4
         with:
-          file_pattern: "*[.svg,.png]"
-          commit_message: automatically rendered mermaid diagrams
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install mermaid-cli
+        run: npm install -g @mermaid-js/mermaid-cli
+
+      - name: Render Mermaid diagrams in Markdown files
+        run: |
+          # Finds all markdown files and converts code blocks with mmdc
+          find . -name "*.md" -not -path "./.git/*" -not -path "./node_modules/*" -print0 | while IFS= read -r -d '' file; do
+            echo "Processing $file..."
+            npx @mermaid-js/mermaid-cli -i "$file" -o "$file" || true
+          done
+
+      - name: Commit rendered files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: "*.png *.svg *.md"
+          commit_message: "chore: automatically render mermaid diagrams [skip ci]"
