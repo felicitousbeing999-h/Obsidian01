@@ -2,7 +2,6 @@
 
 Welcome to the cluster, junior. At Google, Borg ran everything. Then we open-sourced it as Kubernetes.
 
-
   
 
 ### 1. Control Plane: The Brain
