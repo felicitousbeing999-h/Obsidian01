@@ -1,0 +1,63 @@
+name: Convert Obsidian Image Links
+
+on:
+  push:
+    paths:
+      - '**.md'
+
+permissions:
+  contents: write
+
+jobs:
+  convert-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Convert Obsidian WikiLinks to GitHub URLs
+        run: |
+          python3 - << 'EOF'
+          import os
+          import re
+          import urllib.parse
+
+          REPO_URL = "https://github.com/felicitousbeing999-h/Obsidian01/blob/main"
+          # Matches ![[image.png]] or ![[image.png|alt text]]
+          PATTERN = re.compile(r'!\[\[([^\]|]+)(?:\|([^\]]+))?\]\]')
+
+          def replace_link(match):
+              filename = match.group(1).strip()
+              alt_text = match.group(2).strip() if match.group(2) else filename
+              encoded_filename = urllib.parse.quote(filename)
+              return f"![{alt_text}]({REPO_URL}/{encoded_filename})"
+
+          for root, dirs, files in os.walk('.'):
+              # Skip git directory
+              if '.git' in dirs:
+                  dirs.remove('.git')
+              for file in files:
+                  if file.endswith('.md'):
+                      path = os.path.join(root, file)
+                      with open(path, 'r', encoding='utf-8') as f:
+                          content = f.read()
+                      
+                      new_content = PATTERN.sub(replace_link, content)
+                      
+                      if new_content != content:
+                          print(f"Updating: {path}")
+                          with open(path, 'w', encoding='utf-8') as f:
+                              f.write(new_content)
+          EOF
+
+      - name: Commit converted links
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: "*.md"
+          commit_message: "chore: convert obsidian image embeds to github urls [skip ci]"
