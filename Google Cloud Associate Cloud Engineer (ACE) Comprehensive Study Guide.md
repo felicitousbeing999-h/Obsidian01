@@ -27,7 +27,7 @@ Understanding how Google Cloud organizes resources and permissions is foundation
 
 Policies and permissions inherit downwards. A restrictive policy at the Organization level (like an Organization Policy constraint) will override permissive IAM roles granted at the Project level.
 
-```
+```mermaid
 graph TD
     A[Organization] --> B[Folder: Finance]
     A --> C[Folder: Engineering]
@@ -115,6 +115,7 @@ Cloud networking tests your knowledge of isolation, routing, and optimizing cont
 Cloud CDN caches HTTP(S) load-balanced content close to users at Google's edge edge points of presence.
 
 ```mermaid
+sequenceDiagram
     participant User in Tokyo
     participant Edge as Cloud CDN (Tokyo Node)
     participant ALB as Application Load Balancer

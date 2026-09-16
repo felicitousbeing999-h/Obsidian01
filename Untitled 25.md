@@ -1,0 +1,187 @@
+
+```yaml
+
+# Deploy to Azure Kubernetes Service
+
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+  
+
+# shoppingapi-pipeline.yaml
+
+trigger:
+
+  branches:
+
+    include:
+
+      - main
+
+      - develop
+
+  paths:
+
+    include:
+
+      - Shopping/Shopping.API/**
+
+      - pipelines/**
+
+  
+
+pr:
+
+  branches:
+
+    include:
+
+      - main
+
+      - develop
+
+  
+
+variables:
+
+  - template: templates/common/variables.yml
+
+  
+
+  - name: imageRepository
+
+    value: 'shoppingapi'
+
+  
+
+  - name: projectPath
+
+    value: 'Shopping/Shopping.API/Shopping.API.csproj'
+
+  
+
+  - name: dockerfilePath
+
+    value: 'Shopping/Shopping.API/Dockerfile'
+
+  
+
+stages:
+
+  - stage: CI
+
+    displayName: 'Build, Test & Scan'
+
+  
+
+    jobs:
+
+      - job: BuildAndScan
+
+        displayName: 'Build, Test & Security Scan'
+
+  
+
+        pool:
+
+          vmImage: 'ubuntu-latest'
+
+  
+
+        steps:
+
+  
+
+          - template: templates/ci/build-dotnet.yml
+
+            parameters:
+
+              projectPath: $(projectPath)
+
+              dockerfilePath: $(dockerfilePath)
+
+              imageRepository: $(imageRepository)
+
+              runTests: false
+
+  
+
+          - template: templates/security/trivy-scan.yml
+
+            parameters:
+
+              imageRepository: $(imageRepository)
+
+              failOnSeverity: 'HIGH,CRITICAL'
+
+  
+
+          - task: Docker@2
+
+            displayName: 'Push image to ACR'
+
+            inputs:
+
+              containerRegistry: 'Azure Container Registry'
+
+              repository: $(imageRepository)
+
+              command: 'push'
+
+              tags: |
+
+                $(imageTag)
+
+                latest
+
+  
+
+    - stage: CD
+
+    displayName: 'Deploy to Azure Kubernetes Service'
+
+    dependsOn: CI
+
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+
+    jobs:
+
+      - deployment: Deploy
+
+        displayName: 'Deploy Shopping API'
+
+        environment: 'dev'
+
+        pool:
+
+          vmImage: 'ubuntu-latest'
+
+        strategy:
+
+          runOnce:
+
+            deploy:
+
+              steps:
+
+                - checkout: self          # needed to get k8s manifests
+
+                - template: templates/cd/deploy-aks.yml
+
+                  parameters:
+
+                    imageRepository: $(imageRepository)
+
+                    deploymentName: 'shoppingapi'
+
+                    containerName: 'shoppingapi'
+
+                    namespace: $(aksNamespace)
+                    
+                    
+                    
+```
+
+
+
