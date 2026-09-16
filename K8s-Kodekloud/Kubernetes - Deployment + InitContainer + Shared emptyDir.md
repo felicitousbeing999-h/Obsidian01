@@ -1,4 +1,4 @@
-![[Pasted image 20260902125530.png]]
+![Pasted image 20260902125530.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260902125530.png)
 > [!abstract] Pattern  
 > **Deployment → Pod → InitContainer → Shared Volume → Main Container**
 

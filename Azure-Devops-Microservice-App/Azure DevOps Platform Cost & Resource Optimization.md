@@ -1,7 +1,7 @@
 
 
 
-![[Pasted image 20260914120255.png]]![[Pasted image 20260914121128.png]]![[Pasted image 20260914121150.png]]![[Pasted image 20260914121218.png]]![[Pasted image 20260914121243.png]]
+![Pasted image 20260914120255.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914120255.png)![Pasted image 20260914121128.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914121128.png)![Pasted image 20260914121150.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914121150.png)![Pasted image 20260914121218.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914121218.png)![Pasted image 20260914121243.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914121243.png)
 
 
 

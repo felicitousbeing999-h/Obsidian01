@@ -1,4 +1,4 @@
-![[Pasted image 20260910215142.png]]
+![Pasted image 20260910215142.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260910215142.png)
 > [!NOTE] Architecture  
 > Jenkins executes the transfer command **on the Storage Server**, which then pulls Apache logs from App Server 3.
 

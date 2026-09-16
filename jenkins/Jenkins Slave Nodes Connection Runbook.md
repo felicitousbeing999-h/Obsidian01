@@ -1,4 +1,4 @@
-![[Pasted image 20260911172939.png]]![[Pasted image 20260911173628.png]]![[Pasted image 20260911174436.png]]
+![Pasted image 20260911172939.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911172939.png)![Pasted image 20260911173628.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911173628.png)![Pasted image 20260911174436.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911174436.png)
 
 
 ```bash
@@ -126,7 +126,7 @@ Complete!
 [banner@stapp03 ~]$ 
 ```
 
-![[Pasted image 20260911174655.png]]![[Pasted image 20260911174740.png]]---
+![Pasted image 20260911174655.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911174655.png)![Pasted image 20260911174740.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911174740.png)---
 tags: [jenkins, devops, troubleshooting, java, ssh]
 date: 2026-09-11
 

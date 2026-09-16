@@ -1,4 +1,4 @@
-![[Pasted image 20260901212036.png]]
+![Pasted image 20260901212036.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260901212036.png)
 # redis deployment not getting started, stuck in ContainerCreating status because of wrong 'redis-conig' instead of 'redis-config' and 
 
 

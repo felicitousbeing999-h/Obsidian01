@@ -1,4 +1,4 @@
-![[Pasted image 20260816011206.png]]rpull' role assignment under scope '/subscriptions/94321bdf-da5f-4cc4-86eb-fe1c24335bfb/resourceGroups/k8sgpt/providers/Microsoft.ContainerRegistry/registries/hardikarora'
+![Pasted image 20260816011206.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260816011206.png)rpull' role assignment under scope '/subscriptions/94321bdf-da5f-4cc4-86eb-fe1c24335bfb/resourceGroups/k8sgpt/providers/Microsoft.ContainerRegistry/registries/hardikarora'
 The output includes credentials that you must protect. Be sure that you do not include these credentials in your code or check the credentials into your source control. For more information, see https://aka.ms/azadsp-cli
 
 # this is app id

@@ -1,4 +1,4 @@
-![[Pasted image 20260903191228.png]]
+![Pasted image 20260903191228.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260903191228.png)
 
 
 
@@ -234,7 +234,7 @@ kubectl apply -f manifests.yaml
 
 
 Ensure all 6 pods reach the `Running` state without pending on scheduling limits:
-![[Pasted image 20260903192705.png]]
+![Pasted image 20260903192705.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260903192705.png)
   
 
 ### 3. Validate Service Endpoints and Network Routing
@@ -260,12 +260,12 @@ Bash
 ```
 kubectl run net-tool --rm -it --restart=Never --image=busybox:1.36 -- nslookup redis-master
 ```
-![[Pasted image 20260903191807.png]]
+![Pasted image 20260903191807.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260903191807.png)
 ### 5. Ingress Validation
 
 Test external connectivity through the allocated NodePort (`30009`):
 
-  ![[Pasted image 20260903191839.png]]
+  ![Pasted image 20260903191839.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260903191839.png)
 
 Bash
 

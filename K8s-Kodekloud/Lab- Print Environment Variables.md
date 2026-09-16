@@ -1,4 +1,4 @@
-![[Pasted image 20260901204040.png]] **Kubernetes batch-style Pod pattern**: inject configuration through environment variables, execute a command, then terminate successfully.
+![Pasted image 20260901204040.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260901204040.png) **Kubernetes batch-style Pod pattern**: inject configuration through environment variables, execute a command, then terminate successfully.
 
 ### Mental model
 

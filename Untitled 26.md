@@ -1,1 +1,1 @@
-![[Pasted image 20260914140829.png]]![[Pasted image 20260914140850.png]]![[Pasted image 20260914141027.png]]
+![Pasted image 20260914140829.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914140829.png)![Pasted image 20260914140850.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914140850.png)![Pasted image 20260914141027.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260914141027.png)

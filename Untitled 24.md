@@ -1,4 +1,4 @@
-![[Pasted image 20260913121254.png]]Yes. Since you want to **recreate the old AKS with the same name/settings**, use this one-liner:
+![Pasted image 20260913121254.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260913121254.png)Yes. Since you want to **recreate the old AKS with the same name/settings**, use this one-liner:
 
 ```
 az aks create -g k8sgpt -n ASP-MicroserviceApplication --location centralindia --kubernetes-version 1.35 --node-count 1 --node-vm-size Standard_B2s --attach-acr hardikarora --generate-ssh-keys

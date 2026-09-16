@@ -512,7 +512,7 @@
 	    failOnSeverity: 'HIGH,CRITICAL'
 	```
 	
-	Push:![[Pasted image 20260913132421.png]]
+	Push:![Pasted image 20260913132421.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260913132421.png)
 	
 	```yaml
 	- task: Docker@2

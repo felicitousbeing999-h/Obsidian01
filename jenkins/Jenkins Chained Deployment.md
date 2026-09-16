@@ -1,4 +1,4 @@
-![[Pasted image 20260915034115.png]]![[Pasted image 20260915034131.png]]![[Pasted image 20260915034153.png]]![[Pasted image 20260915034343.png]]![[Pasted image 20260915034528.png]]
+![Pasted image 20260915034115.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260915034115.png)![Pasted image 20260915034131.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260915034131.png)![Pasted image 20260915034153.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260915034153.png)![Pasted image 20260915034343.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260915034343.png)![Pasted image 20260915034528.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260915034528.png)
 
 ## What we built
 

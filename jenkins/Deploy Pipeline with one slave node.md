@@ -1,4 +1,4 @@
-![[Pasted image 20260911200503.png]]![[Pasted image 20260911200531.png]]![[Pasted image 20260911200558.png]]![[Pasted image 20260911205119.png]]
+![Pasted image 20260911200503.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911200503.png)![Pasted image 20260911200531.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911200531.png)![Pasted image 20260911200558.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911200558.png)![Pasted image 20260911205119.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911205119.png)
 
 
 ```groovy
@@ -21,7 +21,7 @@ pipeline {
 ```
 
 
-![[Pasted image 20260911205541.png]]
+![Pasted image 20260911205541.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911205541.png)
 
 or this approach simply if not ssh ing into the host stapp server application server anyway
 ```groovy
@@ -48,4 +48,4 @@ pipeline {
 
 
 
-![[Pasted image 20260911205801.png]]![[Pasted image 20260911205840.png]]![[Pasted image 20260911210254.png]]
+![Pasted image 20260911205801.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911205801.png)![Pasted image 20260911205840.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911205840.png)![Pasted image 20260911210254.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260911210254.png)

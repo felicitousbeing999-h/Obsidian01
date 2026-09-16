@@ -1,4 +1,4 @@
-![[Pasted image 20260904172750.png]]A DaemonSet is a Kubernetes resource that ensures that all nodes run a copy of a Pod. Whenever a new node is added to the cluster, Kubernetes will automatically attempt to schedule a DaemonSet Pod onto it.![[Pasted image 20260904172750.png]]
+![Pasted image 20260904172750.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904172750.png)A DaemonSet is a Kubernetes resource that ensures that all nodes run a copy of a Pod. Whenever a new node is added to the cluster, Kubernetes will automatically attempt to schedule a DaemonSet Pod onto it.![Pasted image 20260904172750.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904172750.png)
 
 Typical use cases for DaemonSets include:
 	
@@ -6,7 +6,7 @@ Typical use cases for DaemonSets include:
 - Monitoring: node exporters, metrics collectors
 - Networking: CNI plugins, proxies, or sidecar-like agents
 
-Think of a DaemonSet as a Deployment for nodes. Instead of saying "I want 3 replicas," you're saying, "I want one Pod per![[Pasted image 20260904172750.png]] node." It scales with your infrastructure - not your desired replica count.
+Think of a DaemonSet as a Deployment for nodes. Instead of saying "I want 3 replicas," you're saying, "I want one Pod per![Pasted image 20260904172750.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904172750.png) node." It scales with your infrastructure - not your desired replica count.
 
 Deployment:
 
@@ -167,7 +167,7 @@ And now, we can apply this -
 And voila, we have a DaemonSet! If you check, you can see this running. This will run on all nodes that it possibly can - if you ever don't see the desired number of nodes, it's most likely something like a taint which is stopping it running on a particular node -
 
 `kubectl get daemonset`
-![[Pasted image 20260904173228.png]]
+![Pasted image 20260904173228.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260904173228.png)
 
 Also be aware of the pod naming - it looks different to a Deployment because there is no ReplicaSet. Recall, Deployment pods are named with the ReplicaSet hash as part of the name -
 

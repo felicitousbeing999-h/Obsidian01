@@ -1,4 +1,4 @@
-![[Pasted image 20260901211330.png]]![[Pasted image 20260901211349.png]]The Nautilus DevOps teams is planning to set up a Grafana tool to collect and analyze analytics from some applications. They are planning to deploy it on Kubernetes cluster. Below you can find more details.  
+![Pasted image 20260901211330.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260901211330.png)![Pasted image 20260901211349.png](https://github.com/felicitousbeing999-h/Obsidian01/blob/main/Pasted%20image%2020260901211349.png)The Nautilus DevOps teams is planning to set up a Grafana tool to collect and analyze analytics from some applications. They are planning to deploy it on Kubernetes cluster. Below you can find more details.  
   
 
   
