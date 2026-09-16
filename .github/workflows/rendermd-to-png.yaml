@@ -1,5 +1,3 @@
-# .github/workflows/render-md-mermaid.yml
-
 name: render-md-mermaid
 
 on:
@@ -13,13 +11,20 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Render images for every Mermaid diagram in all Markdown files (*.md) in the repo
-        uses: nielsvaneck/render-md-mermaid@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Commit rendered png and svg files
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Install & Run Mermaid CLI
+        run: |
+          npm install -g @mermaid-js/mermaid-cli
+          mmdc -i input.mmd -o output.png
+
+      - name: Commit rendered diagrams
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           file_pattern: "*[.svg,.png]"
-          commit_message: automatically rendered mermaid diagrams
+          commit_message: "automatically rendered mermaid diagrams"
